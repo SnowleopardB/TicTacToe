@@ -1,3 +1,5 @@
+# TicTacToe
+
 Programma om TicTacToe te spelen 
 als de telefoon geroteerd wordt draait de app mee. 
 
