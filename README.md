@@ -2,11 +2,12 @@ Programma om TicTacToe te spelen
 als de telefoon geroteerd wordt draait de app mee. 
 
 Tictactoe verticaal:
-![potato_vertical](potato_vertical.jpg)
+![TicTacToe_verticall](TicTacToe_vertical.jpeg)
 
 Tictactoe horizontaal:
-![potato_horizontal](potato_horizontal.jpeg)
+![TicTacToe_horizontal](TicTacToe_horizontal.jpeg)
 
 Tictactoe win:
+![TicTacToe_win](TicTacToe_win.jpeg)
 
 
