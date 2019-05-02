@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
@@ -18,16 +19,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //savedInstanceState.putSerializable("asdf", game);
         game = new Game();
 
         if (savedInstanceState != null){
 
             game = (Game) savedInstanceState.getSerializable("game");
-
-            if (game.gameOver){
-
-            }
 
             Button button0 = (Button) findViewById((R.id.button0));
             button0.setText(savedInstanceState.getCharSequence("button0"));
@@ -55,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
 
             Button button8 = (Button) findViewById((R.id.button8));
             button8.setText(savedInstanceState.getCharSequence("button8"));
-
         }
 
     }
@@ -171,17 +166,17 @@ public class MainActivity extends AppCompatActivity {
             findViewById(R.id.button8).setClickable(false);
 
             if (game.won() == GameState.PLAYER_ONE) {
-                EditText text = (EditText) findViewById(R.id.Win);
+                TextView text = (TextView) findViewById(R.id.Win);
                 text.setText("Player one congratzz");
                 findViewById(R.id.Win).setVisibility(View.VISIBLE);
             }
             else if (game.won() == GameState.PLAYER_TWO) {
-                EditText text = (EditText) findViewById(R.id.Win);
+                TextView text = (TextView) findViewById(R.id.Win);
                 text.setText("Player two congratzz");
                 findViewById(R.id.Win).setVisibility(View.VISIBLE);
             }
             else {
-                EditText text = (EditText) findViewById(R.id.Win);
+                TextView text = (TextView) findViewById(R.id.Win);
                 text.setText("It appears to be a Tie");
                 findViewById(R.id.Win).setVisibility(View.VISIBLE);
             }
